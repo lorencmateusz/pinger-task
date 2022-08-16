@@ -15,7 +15,7 @@ def output_parser(cmd_output):
     new_output["hostname"] = output_list[1]
     if int(output_list[output_list.index("Received") + 2][0]) > 0:
         new_output["connected"] = True
-        new_output["time"] = int(output_list[output_list.index("Average") + 2][0])
+        new_output["time"] = output_list[output_list.index("Average") + 2][0]
     else:
         new_output["connected"] = False
         new_output["time"] = "n/a"
